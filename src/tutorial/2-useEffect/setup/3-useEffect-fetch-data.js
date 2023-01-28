@@ -8,12 +8,12 @@ const UseEffectFetchData = () => {
   const getUsers = async() => {
     const response = await fetch(url);
     const users = await response.json();
-    // setUsers(users)
+    setUsers(users)
   }
 
   useEffect(() => {
     getUsers();
-  })
+  }, [])
   return (
     <>
       <h3>github users</h3>
