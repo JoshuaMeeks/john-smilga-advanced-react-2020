@@ -13,7 +13,7 @@ const ControlledInputs = () => {
 
   return (
     <article>
-      <form className="form" onSubmit={handleSubmit}>
+      <form className="form">
         <div className="form-control">
           <label htmlFor="firstName">Name: </label>
           <input type="text" id="firstName" name="firstName" />
@@ -21,7 +21,7 @@ const ControlledInputs = () => {
         <div className="form-control">
           <label htmlFor="email">Email: </label>
           <input type="text" id="email" name="email" />
-          <button type="submit">add person</button>
+          <button type="submit" onClick={handleSubmit}>add person</button>
         </div>
       </form>
     </article>
