@@ -25,6 +25,8 @@ const Index = () => {
     setCart(cart + 1);
   }, [cart]);
 
+  const mostExpensive = useMemo(() => calculateMostExpensive(products), [products])
+
   return (
     <>
       <h1>Count : {count}</h1>
@@ -32,7 +34,7 @@ const Index = () => {
         click me
       </button>
       <h1 style={{marginTop: '3rem'}}>cart: {cart}</h1>
-      <h1>Most Expensive: ${calculateMostExpensive(products)}</h1>
+      <h1>Most Expensive: ${mostExpensive}</h1>
       <BigList products={products} addToCart={addToCart} />
     </>
   )
